@@ -171,6 +171,16 @@ WHERE Color NOT IN ('Red','Black')
 ORDER BY ProductID
 
 --17
+SELECT ProductSubCategoryID
+      , LEFT([Name],35) AS [Name]
+      , Color, ListPrice 
+FROM Production.Product
+WHERE Color IN ('Red','Black') 
+	  and ProductSubCategoryID = 1
+      OR ListPrice BETWEEN 1000 AND 2000  
+ORDER BY ProductID
+
+
 
 
 
