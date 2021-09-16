@@ -327,8 +327,8 @@ from F1
 	inner join F2
 	on F1.T1 = F2.T2
 Result:  F1.T1  F2.T2
-			2	2
-			3	3
+	  2	 2
+	  3	 3
 
 --29
 select 
@@ -338,9 +338,9 @@ from F1
 	left join F2
 	on F1.T1 = F2.T2
 Result:  F1.T1  F2.T2
-			1	null
-			2	2
-			3	3
+	 1	null
+	 2	2
+	 3	3
 
 
 	
