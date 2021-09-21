@@ -96,8 +96,8 @@ where year(o.order_date) = 2002
 group by c.iname
 
 
--- 2.  The following table is used to store information about company¡¯s personnel:
---Create table person (id int, firstname varchar(100), lastname varchar(100)) write a query that returns all employees whose last names  start with ¡°A¡±.
+-- 2.  The following table is used to store information about companyÂ¡Â¯s personnel:
+--Create table person (id int, firstname varchar(100), lastname varchar(100)) write a query that returns all employees whose last names  start with Â¡Â°AÂ¡Â±.
 
 select id, firstname, lastname
 from person
@@ -105,8 +105,8 @@ where lastname like 'A%'
 
 
 
---3.  The information about company¡¯s personnel is stored in the following table:
---Create table person(person_id int primary key, manager_id int null, name varchar(100)not null) The filed managed_id contains the person_id of the employee¡¯s manager.
+--3.  The information about companyÂ¡Â¯s personnel is stored in the following table:
+--Create table person(person_id int primary key, manager_id int null, name varchar(100)not null) The filed managed_id contains the person_id of the employeeÂ¡Â¯s manager.
 --Please write a query that would return the names of all top managers(an employee who does not have  a manger, and the number of people that report directly to this manager.
 
 select [name], count(manager_id) as total_num
@@ -143,7 +143,7 @@ create table assignment.nf.contact(
 create table assignment.nf.division(
 	division_id int primary key identity(1,1),
 	division_name varchar(50) not null,
-	campany_id int not null,
+	company_id int not null,
 	[location] varchar(25),
 	contact_id int,
 	foreign key(company_id) references assignment.nf.company(company_id),
